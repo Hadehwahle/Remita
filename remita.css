@@ -91,7 +91,7 @@ div > .btn:hover {
   background-color: white;
 }
 #menu > .fa-bars:hover {
-  color: #ffffff;
+  color: #e7dede;
   cursor: pointer;
 }
 .big {
@@ -150,6 +150,7 @@ div > .btn:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }
 .shadow {
   background-color: #f0f0f0;
@@ -433,4 +434,58 @@ footer {
 }
 .foot ~ p {
   cursor: pointer;
+}
+
+
+/* Media query */
+@media screen and (max-width: 480px) {
+  .first, .second, .third{
+    display: grid;
+  }
+}
+
+
+@media screen and (max-width: 480px), (min-width: 480px) {
+  .sub-menu, .menu-button {
+    display: none;
+  }
+    .search input {
+    flex: 1;
+    margin: auto;
+  }
+  nav{
+    flex-direction: row-reverse;
+  }
+  .container{
+    flex-direction: column-reverse;
+  }
+  .big{
+    height: auto;
+  }
+  .text{
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:480px) {
+  
+}
+
+
+
+
+@media screen and (min-width:768) {
+  .container{
+    flex-direction: row;
+  }
+  .search input{
+    flex: 0.1;
+  }
+}
+
+
+
+
+@media screen and (min-width:480px) {
+  
 }
