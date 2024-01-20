@@ -326,7 +326,7 @@ div > .btn:hover {
   flex-wrap: wrap;
 }
 .container5 > div > img {
-  width: 800px;
+  width: 100%;
 }
 .text5 > p > a {
   color: rgb(3, 122, 128);
@@ -534,7 +534,7 @@ footer {
   .container2 > .text1 {
     padding-block: 20px;
   }
-  .container .text {
+  .container .text, .container5 {
     display: flex;
     justify-content: center;
     align-items: center;
