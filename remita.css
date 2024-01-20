@@ -20,9 +20,8 @@ body {
 }
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 0px 40px 10px 40px;
   padding-top: 20px;
 }
 .menu {
@@ -98,7 +97,7 @@ div > .btn:hover {
   background-image: url("https://remita.net/assets/minimal/images/hero_img.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
+  height: auto;
   background-attachment: fixed;
 }
 .container {
@@ -180,6 +179,7 @@ div > .btn:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .btn2 {
   display: flex;
@@ -229,6 +229,7 @@ div > .btn:hover {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 }
 .pic2 img {
   width: 600px;
@@ -250,7 +251,7 @@ div > .btn:hover {
   background-size: cover;
   background-attachment: fixed;
   object-fit: contain;
-  height: 650px;
+  height: auto;
 }
 .text4 {
   text-align: center;
@@ -268,22 +269,27 @@ div > .btn:hover {
 .row2,
 .row3 {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-}
-.logos {
-  margin-left: 300px;
-  margin-right: 300px;
 }
 .pad {
   padding-top: 10px;
 }
+
 .card {
   background-color: white;
   width: 100px;
-  height: 80px;
+  height: 100px;
   border-radius: 7px;
-  padding-left: 30px;
+  margin-inline: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px 2px 10px 5px rgb(205, 201, 201);
+  transition: transform 0.4s ease-out;
+}
+.card:hover {
+  transform: scale(1.15);
 }
 #btn {
   text-align: center;
@@ -313,11 +319,11 @@ div > .btn:hover {
   background-image: url("https://remita.net/assets/minimal/images/mini_download_bg_img.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
+  height: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding-right: 100px;
+  flex-wrap: wrap;
 }
 .container5 > div > img {
   width: 800px;
@@ -359,6 +365,10 @@ div > .btn:hover {
   background-size: cover;
   height: 1100px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .container7 {
   display: flex;
@@ -435,30 +445,52 @@ footer {
 .foot ~ p {
   cursor: pointer;
 }
-
-/* Media query */
-@media screen and (max-width: 480px) {
-  .first,
-  .second,
-  .third {
-    display: grid;
-  }
-  
+.pic6 {
+  width: 50%;
 }
+.pic6 img {
+  width: 100%;
+  height: 100%;
+}
+/* Media query */
 
-@media screen and (max-width: 480px), (min-width: 480px) {
+@media screen and (max-width: 700px) {
   .sub-menu,
   .menu-button {
     display: none;
   }
-  .text1{
+  .text1,
+  .text4,
+  .text5 {
     text-wrap: wrap;
     padding-inline: 10px;
+    text-align: center;
   }
-  .pic2 img{
+  .text1 > h1,
+  .text4 > h1,
+  .text5 > h1,
+  .container7 > h1 {
+    font-size: 22px;
+  }
+  .text1 > p,
+  .text4 > p,
+  .text5 > p {
+    font-size: 20px;
+  }
+  .row1,
+  .row2,
+  .row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  .card {
+    margin-block: 10px;
+  }
+  .pic2 img {
     width: 400px;
   }
-  .container3{
+  .container3 {
     flex-wrap: wrap;
   }
   .search input {
@@ -477,22 +509,108 @@ footer {
   .text {
     text-align: center;
   }
+  #menu {
+    position: relative;
+    right: 90px;
+  }
+  .none {
+    display: none;
+  }
+  .container5 {
+    flex-direction: column;
+  }
+  .btn-class {
+    justify-content: center;
+  }
+  .container7 div > input {
+    display: none;
+  }
+  .connect {
+    display: none;
+  }
+  .foot {
+    flex-direction: column;
+  }
+  .container2 > .text1 {
+    padding-block: 20px;
+  }
+  .container .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .text > p {
+    font-size: 35px;
+  }
+  .first,
+  .second,
+  .third {
+    flex-wrap: nowrap;
+  }
 }
 
-@media screen and (min-width: 480px) {
-}
-
-@media screen and (min-width: 768) {
-  .container {
-    flex-direction: row;
+@media screen and (min-width: 701px) {
+  .menu-button {
+    display: inline-block;
   }
-  .search input {
-    flex: 0.1;
+  .sub-menu {
+    display: none;
   }
-  .icon {
+  .first,
+  .second,
+  .third {
+    flex-wrap: nowrap;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .row1,
+  .row2,
+  .row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  .card {
+    margin-block: 10px;
+  }
+  .none {
+    display: none;
+  }
+  .connect {
     display: none;
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 992px) {
+  .menu-button,
+  .sub-menu {
+    display: inline-block;
+  }
+  .connect {
+    display: inline-block;
+  }
+  #menu {
+    display: none;
+  }
+  .row1,
+  .row2,
+  .row3 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    place-items: center;
+    justify-content: center;
+  }
+  .none {
+    display: inline-block;
+  }
+  .first,
+  .second,
+  .third {
+    flex-wrap: wrap;
+  }
+  .container{
+    flex-direction: row;
+  }
 }
