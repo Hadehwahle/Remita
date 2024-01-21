@@ -181,6 +181,9 @@ div > .btn:hover {
   align-items: center;
   flex-wrap: wrap;
 }
+.pic img {
+  width: 100%;
+}
 .btn2 {
   display: flex;
   background-color: #d9d9d9;
@@ -445,6 +448,10 @@ footer {
 .foot ~ p {
   cursor: pointer;
 }
+.biller {
+  height: auto;
+  padding-bottom: 15px;
+}
 .pic6 {
   width: 50%;
 }
@@ -534,7 +541,8 @@ footer {
   .container2 > .text1 {
     padding-block: 20px;
   }
-  .container .text, .container5 {
+  .container .text,
+  .container5 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -561,7 +569,7 @@ footer {
   .third {
     flex-wrap: nowrap;
   }
-  .container{
+  .container {
     flex-direction: column;
   }
   .row1,
@@ -610,7 +618,7 @@ footer {
   .third {
     flex-wrap: wrap;
   }
-  .container{
+  .container {
     flex-direction: row;
   }
 }
