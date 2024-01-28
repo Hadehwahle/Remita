@@ -18,6 +18,12 @@ body {
   width: 100%;
   z-index: 99;
 }
+#visible, #visible-one{
+  z-index: 90;
+  position: fixed;
+  width: 100%;
+  padding: 3rem;
+}
 nav {
   display: flex;
   justify-content: space-evenly;
@@ -69,12 +75,6 @@ nav {
 .visibility div > a:hover {
   color: #f26524;
 }
-/* .personal:hover + .visibility{
-  display: block;
-}
-.business:hover + .visibility-one{
-  display: block;
-} */
 div > .btn {
   background-color: #d9d9d9;
   border: none;
@@ -598,9 +598,6 @@ footer {
   .connect {
     display: inline-block;
   }
-  #menu {
-    display: none;
-  }
   .row1,
   .row2,
   .row3 {
@@ -620,5 +617,9 @@ footer {
   }
   .container {
     flex-direction: row;
+  }
+  nav{
+    justify-content: space-between;
+    padding-inline: 100px;
   }
 }
