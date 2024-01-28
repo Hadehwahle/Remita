@@ -30,8 +30,8 @@
         </div>
         <div class="menu">
           <div class="sub-menu">
-            <a class="personal" href="#">Personal</a>&nbsp;&nbsp;&nbsp;
-            <a class="business" href="#">Business</a>&nbsp;&nbsp;&nbsp;
+            <a class="personal" onmouseover="mouseOver()" onmouseleave="mouseOut()" href="#">Personal</a>&nbsp;&nbsp;&nbsp;
+            <a class="business" onmouseover="hoverOn()" onmouseleave="hoverOut()" href="#">Business</a>&nbsp;&nbsp;&nbsp;
             <a href="#">Developers</a>&nbsp;&nbsp;
           </div>
           &nbsp;
@@ -56,7 +56,7 @@
       </nav>
     </div>
 
-    <div class="visibility">
+    <div id="visible" class="visibility">
       <div class="content">
         <div>
           <a href="#">
@@ -105,7 +105,7 @@
         </div>
       </div>
     </div>
-    <div class="visibility-one">
+    <div id="visible-one" class="visibility-one">
       <div class="content">
         <div>
           <a href="#">
@@ -626,5 +626,6 @@
         <p class="none">MOBILE APP | PRIVACY POLICY | TERMS & CONDITIONS</p>
       </div>
     </footer>
+    <script src="main.js"></script>
   </body>
 </html>
